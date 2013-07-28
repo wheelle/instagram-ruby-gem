@@ -54,8 +54,8 @@ module Instagram
       # @format :json
       # @authenticated false
       # @rate_limited true
-      def media_search(lat, lng, min_timestamp, max_timestamp, options={})
-        response = get('media/search', options.merge(:lat => lat, :lng => lng, :min_timestamp => min_timestamp, :max_timestamp => max_timestamp))
+      def media_search(lat, lng, options={})
+        response = get('media/search', options.merge(:lat => lat, :lng => lng))
         response
       end
     end
